@@ -1,0 +1,48 @@
+co do pracy domowej to propozycja jest taka. Swtórzcie nowy projekt - dziennik elektroniczny. :slightly_smiling_face:
+założenia.
+ - informacje o uczniach:
+	- imie
+	- nazwisko
+	- adres email
+ - infrmacje o nauczycielach
+	- imie
+	- nazwisko
+	- email
+	- wiek
+.       -rodzaj umowy ( zlecenie / B2B )
+.      - Przedmioty których uczy
+- przedmioty
+	- nazwa przedmiotu (matematyka, hisotria, itp)
+
+- oceny
+	- ocena xD
+	- kto wystawił
+	- kto dostał
+	- przedmiot
+- uwagi
+	- tresc uwagi
+	- kto dostał (jedna uwage może dostac wiele osob)
+	- kto wystawił
+zrobcie cos podobnego jak na zajeciach. Dodajcie pare przykladowych danych do kazdej tabeli jaka stworzycie
+(zastanowcie sie nad tym jakie stworzycie tabele i jakie relacje miedzy nimi)
+to jest najbardziej podstawowa wersja :slightly_smiling_face:
+i cos dla bardziej ambitnych (ale ciagle zadne rocket science)
+- sprawdzenie czy nauczyciel wystawia ocenę z przedmiotu którego może uczyc
+	- wystawiajac ocene wszystkie informacje musza byc wypelnione (nie przyjmujemy nulli)
+	- jak wystawic uwage dluzsza niz 255 znakow?
+	- dodajcie lombooka
+	- stworzcie gui dla uzytkownika
+		- 1. zarzadzaj nauczycielami
+			- 1.dodaj nauczyciela
+			- 2.usun nauczyciela
+			- 3.zmodyfikuj dane o nauczycielu
+			- 0.powrot
+		- 2.zarzadzaj uwagami
+			- 1.wystaw uwage
+			- 2.usun uwage
+	itp
+	- moze ktos sie szaprnie na gotowa biblioteke do tworzenia takiego konsolowego gui ?
+	sugeruje jedna z tych: https://stackoverflow.com/questions/1524661/the-best-cli-parser-for-java
+
+jakby komus bylo malo dajcie znac :slightly_smiling_face:
+to samo w razie jakis pytan :slightly_smiling_face: (edited)
