@@ -1,16 +1,16 @@
 package org.edziennik.entities;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
-public enum  Subject {
-    MATEMATYKA,
-    GEOGRAFIA,
-    JEZYK_POLSKI,
-    JEZYK_ANGIELSKI,
-    TECHNIKA_INFORMATYCZNA,
-    PROGRAMOWANIE,
-    WF
+public class  Subject {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int id;
+    String className;
+    @ManyToMany(mappedBy = "subjects")
+    Set<Teacher> teachers;
 }
 
 //- przedmioty

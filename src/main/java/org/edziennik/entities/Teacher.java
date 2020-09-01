@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Getter
@@ -22,8 +24,21 @@ public class Teacher {
     private int age;
     private enum Contract {MANDATE, B2B}
     private Contract contract;
-    private Set<Subject> subjects;
+    @ManyToMany
+    private Set<Subject> subjects = new HashSet<>();
 
+
+    public boolean addSubject(Subject subject){
+       return subjects.add(subject);
+    }
+
+    public boolean removeSubjectByID(int subjectID){
+        Optional<Subject> optionalSubject = subjects.stream()
+                .filter(subject -> subject.id == subjectID)
+                .findFirst();
+
+        return optionalSubject.isPresent() && subjects.remove(optionalSubject.get());
+    }
 }
 
 // - infrmacje o nauczycielach

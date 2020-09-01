@@ -16,8 +16,14 @@ public class Note {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String description;
-    private Set<Integer> recivingStudents_Id;
+    @OneToMany
+    private Set<Student> recivingStudents;
     private int issuerTeacherId;
+
+    public boolean addStudent(Student student){
+        return recivingStudents.add(student);
+    }
+
 }
 
 //- uwagi
