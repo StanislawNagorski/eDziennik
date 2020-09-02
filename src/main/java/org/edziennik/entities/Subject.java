@@ -11,6 +11,13 @@ public class  Subject {
     String className;
     @ManyToMany(mappedBy = "subjects")
     Set<Teacher> teachers;
+
+    public Subject(){}
+
+    public Subject(String className){
+        this.className = className;
+    }
+
 }
 
 //- przedmioty

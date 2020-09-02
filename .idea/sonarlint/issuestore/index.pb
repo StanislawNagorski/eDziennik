@@ -28,3 +28,5 @@ a
 1src/main/java/org/edziennik/entities/Subject.java,5\b\5bd54b800f4b66fce11f8663c70db07189e05dfe
 a
 1src/main/java/org/edziennik/HibernateFactory.java,3\2\32e0a21959173f63b27c48762a7f9a42d2389427
+Z
+*src/main/java/org/edziennik/SchoolDAO.java,4\7\471299267888a1269adbfc5c26b24ad4ebb94ba2

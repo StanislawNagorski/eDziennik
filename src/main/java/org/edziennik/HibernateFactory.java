@@ -18,7 +18,7 @@ public class HibernateFactory {
 
     private static Configuration getHibernateConfig() {
         Configuration configuration = new Configuration();
-        configuration.setProperty("hibernate.connection.url", "jdbc:hsqldb:file:db-data/mydatabase");
+        configuration.setProperty("hibernate.connection.url", "jdbc:hsqldb:file:db/schoolDataBase");
         configuration.setProperty("hibernate.connection.username", "admin123");
         configuration.setProperty("hibernate.connection.password", "admin123");
         configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
