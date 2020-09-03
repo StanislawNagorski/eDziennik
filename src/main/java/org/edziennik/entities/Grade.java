@@ -13,7 +13,7 @@ public class Grade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
     private  int gradeValue; //TODO dodaj ograniczenie zakresu od 1 do 6 z połówkami.
-    @ManyToOne
+    @ManyToOne //TODO dodaj ograniczenie, tylko nauczyciel uczący moze wystawic z tego ocene
     private  Teacher teacher;
     @ManyToOne
     private  Student student;

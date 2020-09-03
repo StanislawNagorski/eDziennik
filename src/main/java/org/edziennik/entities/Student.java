@@ -10,7 +10,6 @@ import java.util.Set;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
 public class Student {
 
@@ -18,6 +17,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    private String surname;
     private String email;
     @OneToMany(mappedBy = "student")
     private Set<Grade> grades = new HashSet<>();
@@ -27,11 +27,18 @@ public class Student {
     public boolean addGrade(Grade grade){
         return grades.add(grade);
     }
-
     public boolean addNote(Note note){
         return notes.add(note);
     }
 
+    public Student(String name, String surname ,String email) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+    }
+
+    public Student() {
+    }
 }
 
 // - informacje o uczniach:
