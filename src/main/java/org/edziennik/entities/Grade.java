@@ -20,14 +20,14 @@ public class Grade {
     @ManyToOne
     private  Subject subject;
 
-    public Grade(int gradeValue, Teacher teacher,Student student, Subject subject) throws Exception {
+    public Grade(int gradeValue, Teacher teacher,Student student, Subject subject)  {
         if (isTeacherValidForThisSubject(teacher, subject)) {
             this.gradeValue = gradeValue;
             this.teacher = teacher;
             this.student = student;
             this.subject = subject;
         } else {
-            throw new Exception("Nauczyciel nie naucza z tego przedmiotu");
+            //throw new Exception("Nauczyciel nie naucza z tego przedmiotu");
         }
     }
 

@@ -30,3 +30,5 @@ a
 1src/main/java/org/edziennik/HibernateFactory.java,3\2\32e0a21959173f63b27c48762a7f9a42d2389427
 Z
 *src/main/java/org/edziennik/SchoolDAO.java,4\7\471299267888a1269adbfc5c26b24ad4ebb94ba2
+[
++src/main/java/org/edziennik/DataFiller.java,e\e\eedd6e96d463a155f8ef6a61ec224fe2b5259995

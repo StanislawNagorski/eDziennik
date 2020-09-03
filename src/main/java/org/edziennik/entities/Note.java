@@ -15,6 +15,7 @@ public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column (length = 2000)
     private String description;
     @ManyToMany(mappedBy = "notes")
     private Set<Student> receivingStudents = new HashSet<>();

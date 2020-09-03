@@ -50,6 +50,7 @@ public class DataFiller {
         noteSchoolDAO.save(noteFromPicollo);
         noteSchoolDAO.save(noteFromVegeta);
         grades.forEach(gradeSchoolDAO::save);
-        HibernateFactory.getSessionFactory().close();
+
     }
+
 }
