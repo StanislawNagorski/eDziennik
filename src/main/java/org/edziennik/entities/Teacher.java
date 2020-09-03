@@ -21,6 +21,7 @@ public class Teacher {
     private String email;
     private int age;
     public enum Contract {MANDATE, B2B}
+    @Enumerated(EnumType.STRING)
     private Contract contract;
     @ManyToMany
     private Set<Subject> subjects;

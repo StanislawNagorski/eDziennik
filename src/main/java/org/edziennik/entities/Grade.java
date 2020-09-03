@@ -20,11 +20,19 @@ public class Grade {
     @ManyToOne
     private  Subject subject;
 
-    public Grade(int gradeValue, Teacher teacher,Student student, Subject subject){
-        this.gradeValue = gradeValue;
-        this.teacher = teacher;
-        this.student = student;
-        this.subject = subject;
+    public Grade(int gradeValue, Teacher teacher,Student student, Subject subject) throws Exception {
+        if (isTeacherValidForThisSubject(teacher, subject)) {
+            this.gradeValue = gradeValue;
+            this.teacher = teacher;
+            this.student = student;
+            this.subject = subject;
+        } else {
+            throw new Exception("Nauczyciel nie naucza z tego przedmiotu");
+        }
+    }
+
+    private boolean isTeacherValidForThisSubject(Teacher teacher, Subject subject){
+     return teacher.getSubjects().contains(subject);
     }
 
     public Grade(){}
