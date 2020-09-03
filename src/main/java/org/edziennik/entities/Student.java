@@ -19,9 +19,9 @@ public class Student {
     private int id;
     private String name;
     private String email;
-    @OneToMany
+    @OneToMany(mappedBy = "student")
     private Set<Grade> grades = new HashSet<>();
-    @OneToMany
+    @ManyToMany
     private Set<Note> notes = new HashSet<>();
 
     public boolean addGrade(Grade grade){

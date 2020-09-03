@@ -16,7 +16,6 @@ public class App {
                 new Subject("Teleportacja"),
                 new Subject("DOOOOOOGE!"));
 
-
         List<Teacher> teacherList = List.of(
                 new Teacher("Son", "Goku", "songoku111@aol.com", 32, Teacher.Contract.MANDATE, Set.of(sl.get(1), sl.get(4))),
                 new Teacher("Vegeta", "Prince", "vegetaIsDeBest@vegeta.vegeta", 35, Teacher.Contract.B2B, Set.of(sl.get(2), sl.get(3))),

@@ -16,9 +16,10 @@ public class Note {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String description;
-    @OneToMany
+    @ManyToMany(mappedBy = "notes")
     private Set<Student> recivingStudents;
-    private int issuerTeacherId;
+    @ManyToOne
+    private Teacher teacher;
 
     public boolean addStudent(Student student){
         return recivingStudents.add(student);

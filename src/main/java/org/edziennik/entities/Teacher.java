@@ -24,6 +24,8 @@ public class Teacher {
     private Contract contract;
     @ManyToMany
     private Set<Subject> subjects;
+    @OneToMany (mappedBy = "teacher")
+    private Set<Note> notes;
 
 
     public boolean addSubject(Subject subject){
